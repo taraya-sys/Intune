@@ -9,14 +9,14 @@ Simple script to install a network printer from an INF file. The INF and require
 #### Win32 app Commands ####
 
 Install:
-powershell.exe -executionpolicy bypass -file .\Install-Printer.ps1 -PortName "IP_10.10.1.1" -PrinterIP "10.1.1.1" -PrinterName "Canon Printer Upstairs" -DriverName "Canon Generic Plus UFR II" -INFFile "CNLB0MA64.inf"
+powershell.exe -executionpolicy bypass -file .\Install-Printer.ps1 -PortName "IP_192.168.3.90" -PrinterIP "192.168.3.90" -PrinterName "CES-PRNT-102-KIT" -DriverName "Canon Generic Plus UFR II" -INFFile "CNLB0MA64.inf"
 
 Uninstall:
-powershell.exe -executionpolicy bypass -file .\Remove-Printer.ps1 -PrinterName "Canon Printer Upstairs"
+powershell.exe -executionpolicy bypass -file .\Remove-Printer.ps1 -PrinterName "CES-PRNT-102-KIT"
 
 Detection:
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Print\Printers\Canon Printer Upstairs
-Name = "Canon Printer Upstairs"
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Print\Printers\CES-PRNT-102-KIT
+Name = "CES-PRNT-102-KIT"
 
 .Example
 .\Install-Printer.ps1 -PortName "IP_10.10.1.1" -PrinterIP "10.1.1.1" -PrinterName "Canon Printer Upstairs" -DriverName "Canon Generic Plus UFR II" -INFFile "CNLB0MA64.inf"
